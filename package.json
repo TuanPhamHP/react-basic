@@ -2,7 +2,7 @@
 	"name": "react-basic",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://TuanPhamHP.github.io/react-app",
+	"homepage": "https://TuanPhamHP.github.io/react-basic",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
