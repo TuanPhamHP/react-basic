@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Layouts/Header';
+import { useTheme } from './context/Theme';
+import AppRouteController from './routes';
+import ToggleThemeButton from './components/ToggleThemeButton';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const { themeClass } = useTheme();
+	return (
+		<div className={`App ${themeClass}`}>
+			<Header />
+			<div id='main-content' className='min-h-[100vh] dark:bg-slate-800'>
+				<AppRouteController />
+			</div>
+			<ToggleThemeButton />
+		</div>
+	);
 }
 
 export default App;
