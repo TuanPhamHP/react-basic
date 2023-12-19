@@ -6,6 +6,7 @@ export default function AppRouteController() {
 	return (
 		<Routes>
 			<Route path='/' element={<HomePage />} />
+			<Route path='/react-basic' element={<HomePage />} />
 			<Route path='*' element={<NotFoundPage />} />
 		</Routes>
 	);

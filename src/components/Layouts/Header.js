@@ -3,17 +3,18 @@ import { AcademicCapIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
+	const prefix = '/react-basic';
 	const [listRouter, setlistRouter] = useState([
 		{
-			link: '/',
+			link: prefix,
 			name: 'Home',
 		},
 		{
-			link: '/service',
+			link: `${prefix}/service`,
 			name: 'Service',
 		},
 		{
-			link: '/about-me',
+			link: `${prefix}/about-me`,
 			name: 'About',
 		},
 	]);
