@@ -20,3 +20,7 @@ body {
 	background-image: url('../public/assets/images/paper-bg-01.webp');
 	background-size: contain; */
 }
+
+.z-4 {
+	z-index: 4;
+}

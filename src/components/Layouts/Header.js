@@ -3,7 +3,7 @@ import { AcademicCapIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
-	const prefix = '/react-basic';
+	const prefix = '';
 	const [listRouter, setlistRouter] = useState([
 		{
 			link: prefix,
@@ -20,13 +20,13 @@ export default function Header() {
 	]);
 
 	return (
-		<nav className='bg-white border-gray-200 dark:bg-gray-900 sticky top-0 shadow'>
+		<nav className='bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-10 shadow'>
 			<div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-				<a href='https://flowbite.com/' className='flex items-center space-x-3 rtl:space-x-reverse'>
+				<div className='flex items-center space-x-3 rtl:space-x-reverse'>
 					<div className='flex gap-2 items-center'>
 						<AcademicCapIcon className='h-10 w-10 dark:text-white text-indigo-500' />
 					</div>
-				</a>
+				</div>
 				<div className='flex md:order-2'>
 					<button
 						type='button'

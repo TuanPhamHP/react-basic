@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function TechBlock({ name, link }) {
 	return (
@@ -14,6 +15,7 @@ hover:bg-slate-600 hover:text-white transition'
 	);
 }
 export default function HomePage() {
+	const navigate = useNavigate();
 	const [techBlock, settechBlock] = useState([
 		{
 			name: 'Create React App',
@@ -28,6 +30,9 @@ export default function HomePage() {
 			link: 'https://reactrouter.com/en/main/start/overview',
 		},
 	]);
+	const viewReactDoc = () => {
+		navigate('/docs');
+	};
 	return (
 		<div className='dark:text-white py-5 max-w-7xl mx-auto'>
 			<div className='min-h-[250px] flex items-center justify-center w-full'>
@@ -39,12 +44,24 @@ export default function HomePage() {
 					<span className='font-normal'>( •̀ ω •́ )✧</span>
 				</h1>
 			</div>
-			<div className='flex items-center gap-2'>
+
+			<button
+				className='
+			px-5 py-3 block mx-auto mt-5 bg-slate-900 text-white rounded-full transition text-lg
+			hover:shadow dark:bg-white dark:text-slate-900
+			hover:text-slate-900 hover:bg-neutral-200
+			dark:hover:bg-slate-900 dark:hover:text-white
+			'
+				onClick={viewReactDoc}
+			>
+				Start learning
+			</button>
+			{/* <div className='flex items-center gap-2 mt-20'>
 				<p className='font-bold text-xl'>Stack: </p>
 				{techBlock.map(o => (
-					<TechBlock name={o.name} link={o.link} />
+					<TechBlock key={o.name} name={o.name} link={o.link} />
 				))}
-			</div>
+			</div> */}
 		</div>
 	);
 }

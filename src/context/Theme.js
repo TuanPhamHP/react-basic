@@ -8,7 +8,8 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-	const [isDarkTheme, setDarkTheme] = useState(false);
+	const [isDarkTheme, setDarkTheme] = useState(true);
+	const [docSidebar, setDocSidebar] = useState([]);
 
 	const toggleTheme = () => {
 		setDarkTheme(prevTheme => !prevTheme);
@@ -16,5 +17,9 @@ export const ThemeProvider = ({ children }) => {
 
 	const themeClass = isDarkTheme ? 'dark' : 'light';
 
-	return <ThemeContext.Provider value={{ isDarkTheme, toggleTheme, themeClass }}>{children}</ThemeContext.Provider>;
+	return (
+		<ThemeContext.Provider value={{ isDarkTheme, toggleTheme, themeClass, docSidebar, setDocSidebar }}>
+			{children}
+		</ThemeContext.Provider>
+	);
 };
