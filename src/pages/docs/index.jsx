@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PageHeading from '../../components/Shared/PageHeading';
 import { useTheme } from '../../context/Theme';
 
 export default function ReactDocsPage() {
@@ -19,5 +20,9 @@ export default function ReactDocsPage() {
 		initSidebar();
 	}, []);
 
-	return <div>ReactDocsPage</div>;
+	return (
+		<div className='w-full md:px-5'>
+			<PageHeading text={'Nothing here. Gonna update soon....'} addOnClass={'text-left'} />
+		</div>
+	);
 }

@@ -31,7 +31,8 @@ export default function HomePage() {
 		},
 	]);
 	const viewReactDoc = () => {
-		navigate('/docs');
+		// navigate('/docs');
+		navigate('/docs/installation');
 	};
 	return (
 		<div className='dark:text-white py-5 max-w-7xl mx-auto'>
