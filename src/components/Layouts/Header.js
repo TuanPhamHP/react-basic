@@ -5,18 +5,18 @@ import { Link } from 'react-router-dom';
 export default function Header() {
 	const prefix = '';
 	const [listRouter, setlistRouter] = useState([
-		{
-			link: prefix,
-			name: 'Home',
-		},
-		{
-			link: `${prefix}/service`,
-			name: 'Service',
-		},
-		{
-			link: `${prefix}/about-me`,
-			name: 'About',
-		},
+		// {
+		// 	link: prefix,
+		// 	name: 'Home',
+		// },
+		// {
+		// 	link: `${prefix}/service`,
+		// 	name: 'Service',
+		// },
+		// {
+		// 	link: `${prefix}/about-me`,
+		// 	name: 'About',
+		// },
 	]);
 
 	return (
@@ -24,7 +24,9 @@ export default function Header() {
 			<div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
 				<div className='flex items-center space-x-3 rtl:space-x-reverse'>
 					<div className='flex gap-2 items-center'>
-						<AcademicCapIcon className='h-10 w-10 dark:text-white text-indigo-500' />
+						<Link to={'/'}>
+							<AcademicCapIcon className='h-10 w-10 dark:text-white text-indigo-500' />
+						</Link>
 					</div>
 				</div>
 				<div className='flex md:order-2'>

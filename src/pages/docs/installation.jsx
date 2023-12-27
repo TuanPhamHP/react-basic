@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PageHeading from '../../components/Shared/PageHeading';
+import PageMarkBook from '../../components/Shared/PageMarkBook';
 import FakeTerminalUI from '../../components/Shared/FakeTerminalUI';
 import { useTheme } from '../../context/Theme';
 
 export default function InstallationPage() {
 	const { setDocSidebar } = useTheme();
-
+	const [pageMarkBook, setPageMarkBook] = useState([]);
 	const initSidebar = () => {
 		setDocSidebar([
 			{
@@ -23,7 +24,7 @@ export default function InstallationPage() {
 	return (
 		<div className='flex'>
 			<div className='w-full md:px-5'>
-				<PageHeading text={'Environment'} addOnClass={'text-left'} />
+				<PageHeading text={'Environment'} addOnClass={'text-left'} markedAs={'env'} />
 				<p className='text-slate-900 dark:text-white mt-5'>Hướng dẫn tạo ứng dụng React</p>
 				<p className='text-slate-900 dark:text-white mt-5 leading-8'>
 					Trước khi bắt đầu cài đặt thì bạn cần đảm bảo máy tính của bạn đã có{' '}
@@ -77,16 +78,21 @@ export default function InstallationPage() {
 					</a>
 				</p>
 				<p className='text-slate-900 dark:text-white mt-5 leading-8 font-bold py-2 italic'>
-					Note: Bạn cần phải cài đặt đầy đủ Node và Package Manager tại local để có thể tiếp tục.
+					Note: Bạn cần phải cài đặt đầy đủ Node và Package Manager tại local để có thể tiếp tục. Hiện tại tôi chỉ hướng
+					đến phần basic nên trong tài liệu này sẽ chỉ đề cập đến việc khởi tạo app với "Create-React-App" vì nó đơn
+					giản và không cần config phức tạp.
 				</p>
 				<div className='py-3'></div>
-				<PageHeading text={'1. Create-React-App'} addOnClass={'text-left'} />
+				<PageHeading text={'1. Create-React-App'} addOnClass={'text-left'} markedAs={'create-react-app'} />
 				<p className='text-slate-900 dark:text-white mt-5 leading-8'>
 					Create-React-App được dùng để khởi tạo nhanh một React SPA. Recommend khi bạn muốn tạo nhanh một SPA, phù hợp
 					khi bạn có một dự án nhỏ hoặc sử dụng để học thêm về core của React
 				</p>
 				<p className='text-slate-900 dark:text-white mt-5 leading-8'>
 					<b>Note:</b> Required Node &gt;= 14 on local
+				</p>
+				<p className='text-slate-900 dark:text-white mt-5 text-lg md:text-2xl underline leading-8'>
+					<b>B1: Init</b>
 				</p>
 				<p className='text-slate-900 dark:text-white mt-5 leading-8'>
 					<b>Bạn có thể chọn 1 trong các cách cài sau:</b>
@@ -117,15 +123,35 @@ export default function InstallationPage() {
 				<FakeTerminalUI>
 					<p>yarn create react-app my-app</p>
 				</FakeTerminalUI>
-
 				<span className='text-slate-900 dark:text-white'>
 					<b>Note: </b>
 					{`yarn create chỉ dùng được với phiên bản Yarn 0.25 trở lên`}
 				</span>
+				<p className='text-slate-900 dark:text-white mt-5 leading-8'>
+					Sau đó bạn chỉ cần ngồi đợi project được init. <br />
+					Khi trình khởi tạo hoàn tất, bạn có thể mở project vừa tạo bằng cách gõ:
+				</p>
+				<FakeTerminalUI>
+					<p>cd my-app</p>
+				</FakeTerminalUI>
+				<p className='text-slate-900 dark:text-white mt-5 text-lg md:text-2xl underline leading-8'>
+					<b>B2: Run</b>
+				</p>
+				<p className='text-slate-900 dark:text-white mt-5 leading-8 text-lg'>
+					All done ! <br />
+					Project của bạn đã được khởi tạo thành công. Để chạy project tại local, bạn run command:
+				</p>{' '}
+				<FakeTerminalUI>
+					<p>npm start</p>
+				</FakeTerminalUI>
+				<p className='text-slate-900 dark:text-white mt-5 leading-8 text-lg'>
+					Web app của bạn sẽ được serve tại:{' '}
+					<a href='http://localhost:3000' target='_blank' rel='noreferrer' className='underline text-blue-500'>
+						http://localhost:3000
+					</a>
+				</p>
 			</div>
-			<div className='hidden md:block table-of-content w-[300px] min-w-[300px] text-slate-900 dark:text-white'>
-				Table of content
-			</div>
+			<PageMarkBook />
 		</div>
 	);
 }

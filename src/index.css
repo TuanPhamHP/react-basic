@@ -14,11 +14,11 @@
 *:not(i) {
 	font-family: 'Be Vietnam Pro', sans-serif;
 }
-
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 80px;
+}
 body {
-	/* background-color: rgba(231, 232, 233, 0.301);
-	background-image: url('../public/assets/images/paper-bg-01.webp');
-	background-size: contain; */
 }
 
 .z-4 {

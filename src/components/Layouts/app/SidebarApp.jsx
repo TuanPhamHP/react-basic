@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme } from '../../context/Theme';
+import { useTheme } from '../../../context/Theme';
 import { Link, NavLink } from 'react-router-dom';
 
 function SidebarLink({ item }) {
