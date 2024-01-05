@@ -7,20 +7,7 @@ import { useTheme } from '../../context/Theme';
 export default function InstallationPage() {
 	const { setDocSidebar } = useTheme();
 	const [pageMarkBook, setPageMarkBook] = useState([]);
-	const initSidebar = () => {
-		setDocSidebar([
-			{
-				name: 'Installation',
-				vneseName: 'Cài đặt',
-				type: 'link',
-				link: '/docs/installation',
-			},
-		]);
-	};
 
-	useEffect(() => {
-		initSidebar();
-	}, []);
 	return (
 		<div className='flex'>
 			<div className='w-full md:px-5'>
@@ -56,6 +43,18 @@ export default function InstallationPage() {
 				<FakeTerminalUI>
 					<p>v18.14.2</p>
 				</FakeTerminalUI>
+				<p className='text-slate-900 dark:text-white mt-5 leading-8 font-bold py-2 italic'>
+					Trong trường hợp máy bạn chưa cài NodeJS thì vui lòng cài đặt trước khi đọc tiếp. Ở đây tôi recommend việc cài
+					bản LTS. Link cài:{' '}
+					<a
+						href='https://nodejs.org/en/'
+						target='_blank'
+						rel='noreferrer'
+						className='inline-block px-1 rounded text-slate-900 dark:text-white underline decoration-2 hover:text-cyan-500'
+					>
+						NodeJS
+					</a>
+				</p>
 				<p className='text-slate-900 dark:text-white mt-5 leading-8'>
 					Sau khi cài đặt Node bạn cần thêm 1 <i>package manager</i> để quản lý các package tại local. <br />
 					Chúng ta có thể dùng 2 loại <i>package manager</i> phổ biến là
@@ -77,6 +76,18 @@ export default function InstallationPage() {
 						YARN
 					</a>
 				</p>
+				<p className='text-slate-900 dark:text-white mt-5 leading-8'>
+					Kiểm tra local đã cài đặt NPM hay chưa bạn có thể mở Terminal và gõ:
+				</p>
+				<FakeTerminalUI>
+					<p>npm -v</p>
+				</FakeTerminalUI>
+				<p className='text-slate-900 dark:text-white mt-5 leading-8'>
+					Nếu máy bạn đã cài đặt NPM thì CLI sẽ trả về kết quả là version hiện tại của NPM. Ví dụ:
+				</p>
+				<FakeTerminalUI>
+					<p>9.6.7</p>
+				</FakeTerminalUI>
 				<p className='text-slate-900 dark:text-white mt-5 leading-8 font-bold py-2 italic'>
 					Note: Bạn cần phải cài đặt đầy đủ Node và Package Manager tại local để có thể tiếp tục. Hiện tại tôi chỉ hướng
 					đến phần basic nên trong tài liệu này sẽ chỉ đề cập đến việc khởi tạo app với "Create-React-App" vì nó đơn

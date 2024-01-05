@@ -12,9 +12,17 @@ export const ThemeProvider = ({ children }) => {
 	const [docSidebar, setDocSidebar] = useState([]);
 
 	const toggleTheme = () => {
+		localStorage.setItem('theme', isDarkTheme ? 'light' : 'dark');
 		setDarkTheme(prevTheme => !prevTheme);
 	};
-
+	useState(() => {
+		const currentTheme = localStorage.getItem('theme');
+		if (currentTheme === 'dark') {
+			setDarkTheme(true);
+		} else {
+			setDarkTheme(false);
+		}
+	}, []);
 	const themeClass = isDarkTheme ? 'dark' : 'light';
 
 	return (

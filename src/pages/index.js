@@ -34,6 +34,10 @@ export default function HomePage() {
 		// navigate('/docs');
 		navigate('/docs/installation');
 	};
+	const viewReactApp = () => {
+		// navigate('/docs');
+		navigate('/app');
+	};
 	return (
 		<div className='dark:text-white py-5 max-w-7xl mx-auto'>
 			<div className='min-h-[250px] flex items-center justify-center w-full'>
@@ -46,17 +50,30 @@ export default function HomePage() {
 				</h1>
 			</div>
 
-			<button
-				className='
-			px-5 py-3 block mx-auto mt-5 bg-slate-900 text-white rounded-full transition text-lg
+			<div>
+				<button
+					className='
+			px-5 py-3 block w-[250px] mx-auto mt-5 bg-slate-900 text-white rounded-full transition text-lg
 			hover:shadow dark:bg-white dark:text-slate-900
 			hover:text-slate-900 hover:bg-neutral-200
 			dark:hover:bg-slate-900 dark:hover:text-white
 			'
-				onClick={viewReactDoc}
-			>
-				Start learning
-			</button>
+					onClick={viewReactDoc}
+				>
+					View Doc
+				</button>
+				<button
+					className='
+			px-5 py-3 block w-[250px] mx-auto mt-5 bg-slate-900 text-white rounded-full transition text-lg
+			hover:shadow dark:bg-white dark:text-slate-900
+			hover:text-slate-900 hover:bg-neutral-200
+			dark:hover:bg-slate-900 dark:hover:text-white
+			'
+					onClick={viewReactApp}
+				>
+					App
+				</button>
+			</div>
 			{/* <div className='flex items-center gap-2 mt-20'>
 				<p className='font-bold text-xl'>Stack: </p>
 				{techBlock.map(o => (
