@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/react-basic/static/css/main.2218b8a0.css",
-    "main.js": "/react-basic/static/js/main.cdfc18c3.js",
+    "main.css": "/react-basic/static/css/main.4d45094d.css",
+    "main.js": "/react-basic/static/js/main.f01157eb.js",
     "static/js/787.d4aba7ab.chunk.js": "/react-basic/static/js/787.d4aba7ab.chunk.js",
+    "static/media/task_bg_1.png": "/react-basic/static/media/task_bg_1.9b5b75a2ba05777991d7.png",
+    "static/media/card_task_05.png": "/react-basic/static/media/card_task_05.aed44fcb55f1ca2e4850.png",
+    "static/media/card_task_02.png": "/react-basic/static/media/card_task_02.125b0d200d6bb79ae033.png",
+    "static/media/logo.svg": "/react-basic/static/media/logo.f5f568b6ff6a077662fdcfb371a99127.svg",
+    "static/media/card_task_01.png": "/react-basic/static/media/card_task_01.ae30cb744eb115b70bcb.png",
+    "static/media/card_task_03.png": "/react-basic/static/media/card_task_03.3bca3035d96b0ce92a47.png",
+    "static/media/card_task_04.png": "/react-basic/static/media/card_task_04.5893ba179493557be771.png",
     "index.html": "/react-basic/index.html",
-    "main.2218b8a0.css.map": "/react-basic/static/css/main.2218b8a0.css.map",
-    "main.cdfc18c3.js.map": "/react-basic/static/js/main.cdfc18c3.js.map",
+    "main.4d45094d.css.map": "/react-basic/static/css/main.4d45094d.css.map",
+    "main.f01157eb.js.map": "/react-basic/static/js/main.f01157eb.js.map",
     "787.d4aba7ab.chunk.js.map": "/react-basic/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2218b8a0.css",
-    "static/js/main.cdfc18c3.js"
+    "static/css/main.4d45094d.css",
+    "static/js/main.f01157eb.js"
   ]
 }
